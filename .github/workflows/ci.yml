@@ -25,6 +25,7 @@ jobs:
         run: python -m pytest -v
 
   second-job:
+  needs: first-job
     runs-on: ubuntu-latest
     steps:
       - name: Show second job
