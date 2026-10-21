@@ -13,3 +13,5 @@ jobs:
         run: echo "My CI pipeline ran after a new commit!"
       - name: Check environment
         run: echo "GitHub Actions is executing this job on Ubuntu."
+      - name: Validate README file
+        run: test -f README.md
