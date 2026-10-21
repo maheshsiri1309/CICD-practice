@@ -1,3 +1,4 @@
+
 name: My First CI Pipeline
 
 on:
@@ -8,7 +9,6 @@ on:
 jobs:
   first-job:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -23,7 +23,8 @@ jobs:
 
       - name: Run automated tests
         run: python -m pytest -v
-         second-job:
+
+  second-job:
     runs-on: ubuntu-latest
     steps:
       - name: Show second job
