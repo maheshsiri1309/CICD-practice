@@ -9,6 +9,7 @@ on:
 jobs:
   first-job:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -25,8 +26,9 @@ jobs:
         run: python -m pytest -v
 
   second-job:
-  needs: first-job
+    needs: first-job
     runs-on: ubuntu-latest
+
     steps:
       - name: Show second job
         run: echo "This is my second CI job."
