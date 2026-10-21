@@ -1,0 +1,15 @@
+name: My First CI Pipeline
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Welcome message
+        run: echo "My first CI pipeline is running successfully!"
+      - name: Check environment
+        run: echo "GitHub Actions is executing this job on Ubuntu."
