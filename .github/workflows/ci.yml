@@ -2,6 +2,7 @@ name: My First CI Pipeline
 
 on:
   push:
+  pull_request:
   workflow_dispatch:
 
 jobs:
