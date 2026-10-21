@@ -24,8 +24,15 @@ jobs:
 
       - name: Run automated tests
         run: python -m pytest -v
+
       - name: Create CI report
         run: echo "CI tests completed successfully" > ci-report.txt
+
+      - name: Upload CI report
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-report
+          path: ci-report.txt
 
   second-job:
     needs: first-job
