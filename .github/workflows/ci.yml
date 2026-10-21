@@ -10,6 +10,6 @@ jobs:
 
     steps:
       - name: Welcome message
-        run: echo "My first CI pipeline is running successfully!"
+        run: echo "My CI pipeline ran after a new commit!"
       - name: Check environment
         run: echo "GitHub Actions is executing this job on Ubuntu."
