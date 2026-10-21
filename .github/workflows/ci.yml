@@ -1,5 +1,3 @@
-name: My First CI Pipeline
-
 on:
   push:
   workflow_dispatch:
@@ -9,9 +7,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Welcome message
         run: echo "My CI pipeline ran after a new commit!"
+
       - name: Check environment
         run: echo "GitHub Actions is executing this job on Ubuntu."
+
       - name: Validate README file
         run: test -f README.md
